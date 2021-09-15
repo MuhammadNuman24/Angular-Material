@@ -43,7 +43,7 @@ import { MatSortModule } from '@angular/material/sort';
   ],
   exports:[
     MatTableModule,
-    MatAutocompleteModule,
+     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
