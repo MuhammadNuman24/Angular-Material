@@ -5,17 +5,18 @@ import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoRoutingModule } from './demo/demo/demo-routing.module';
-
+import { ContractmanagerModule } from './contractmanager/contractmanager.module';
 const routes: Routes = [
   { path: 'demo', loadChildren: '../demo/demo.module#DemoModule' },
-  { path: '**', redirectTo: 'demo' }
+  { path: 'contractmanager',loadChildren: '../contractmanager/contractmanager.module' },
+  { path: '**', redirectTo: 'contractmanager' }
 ]
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,ContractmanagerModule,
     DemoRoutingModule,
     AppRoutingModule,
     BrowserAnimationsModule,
