@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoRoutingModule } from './demo/demo/demo-routing.module';
 import { ContractmanagerModule } from './contractmanager/contractmanager.module';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   { path: 'demo', loadChildren: '../demo/demo.module#DemoModule' },
   { path: 'contractmanager',loadChildren: '../contractmanager/contractmanager.module' },
@@ -19,6 +20,7 @@ const routes: Routes = [
     BrowserModule,ContractmanagerModule,
     DemoRoutingModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes)
   ],

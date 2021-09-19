@@ -8,7 +8,8 @@ import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { FormsModule } from '@angular/forms';
 import { ModuleModule } from 'src/app/shared/module/module.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { UserServiceService } from './services/user-service.service';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   { path: '', component: ContractmanagerAppComponent,
 children:[
@@ -29,7 +30,9 @@ children:[
     FormsModule,
     ModuleModule,
     FlexLayoutModule,
+    HttpClientModule,
     RouterModule.forChild(routes)
-  ]
+  ],
+  providers:[UserServiceService]
 })
 export class ContractmanagerModule { }
