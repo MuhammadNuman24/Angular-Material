@@ -12,11 +12,11 @@ export class SidenavComponent implements OnInit {
 
   public isScreenSmall: boolean|undefined;
 
-  users: Observable<User[]> | undefined;
+  users: Observable<User[]>| undefined;
 
   constructor(
     private breakpointobserver: BreakpointObserver,
-    private userservice: UserServiceService
+    private userservice : UserServiceService,
   ) { }
 
 

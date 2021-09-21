@@ -13,7 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   { path: '', component: ContractmanagerAppComponent,
 children:[
-  {path:'',component:MainContentComponent}]},
+  {path:'id',component:MainContentComponent},
+  {path:'',component:MainContentComponent}
+]
+},
   { path: '**', redirectTo: ''}
 ]
 
