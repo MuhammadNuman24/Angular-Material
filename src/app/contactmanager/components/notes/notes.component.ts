@@ -1,40 +1,15 @@
-import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
-import { Note } from '../../models/note';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.css']
 })
-export class NotesComponent implements OnInit,AfterViewInit {
+export class NotesComponent implements OnInit {
 
-  @Input()
-  notes: Note[] = [];
-  displayedColumns: string[] = ['position', 'title', 'date'];
-  dataSource!: MatTableDataSource<Note>;
-
-  constructor() {
-    
-   }
-
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort)
-  sort: MatSort = new MatSort;
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
-  }
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.dataSource = new MatTableDataSource<Note>(this.notes);
   }
 
 }
