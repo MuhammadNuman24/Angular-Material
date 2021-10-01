@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes,RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { NotesComponent } from './contractmanager/components/notes/notes.component';
+
 
 const routes:Routes=[
   {path:'contactmanager',loadChildren:() => import('./contactmanager/contactmanager.module').then(m=>m.ContactmanagerModule)},
@@ -17,7 +17,7 @@ const routes:Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    NotesComponent
+
   ],
   imports: [
     BrowserModule,
