@@ -13,12 +13,15 @@ export class ToolbarComponent implements OnInit {
 
   constructor(private dialog:MatDialog) { }
   ngOnInit() {
+    
   }
+
 
   openAddContactDialog():void{
     let dialogRef=this.dialog.open(DialogComponent,{
-      width:'450px',
+      width:'400px',
     });
+
     dialogRef.afterClosed().subscribe(result=>{
        console.log('The dialog was closed',result)
     });
